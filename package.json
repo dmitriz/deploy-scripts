@@ -1,0 +1,23 @@
+{
+  "name": "deploy-scripts",
+  "version": "1.0.0",
+  "description": "A collection of reusable deployment scripts extracted from ansible-test. We follow strict TDD: write tests first, then implementation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitriz/deploy-scripts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitriz/deploy-scripts/issues"
+  },
+  "homepage": "https://github.com/dmitriz/deploy-scripts#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
