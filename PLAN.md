@@ -3,23 +3,24 @@
 We will extract reusable deployment scripts from the `ansible-test` repository following Test-Driven Development (TDD). Each functional change will be small and incremental. 
 
 ## Goals
-- Write tests first for each step
-- Move functionality from provisioning files to reusable scripts
-- Keep changes minimal and focused
+- Write tests first for each step, and only for the current step.
+- Do not implement the script for a step until all previous scripts and tests are passing.
+- At every step, remove any unnecessary scripts or tests before starting a new one.
+- Move functionality from provisioning files to reusable scripts, one at a time.
+- Keep changes minimal and focused.
 - Document steps in this plan with checkboxes
 
 ## Steps
 
-1. [ ] Initialize repository
-   - [ ] Create `.gitignore` (done)
-   - [ ] Create `README.md` (done)
-   - [ ] Create `PLAN.md` (this document)
-   - [ ] Import provisioning instructions from `ansible-test/PROVISIONING_STEPS.md`
+1. [x] Initialize repository
+   - [x] Create `.gitignore`
+   - [x] Create `README.md`
+   - [x] Create `PLAN.md` (this document)
+   - [x] Import provisioning instructions from `ansible-test/PROVISIONING_STEPS.md`
 
-2. [ ] Set up testing framework
-   - [ ] Choose testing tool (e.g., Jest)
-   - [ ] Add test directory: `tests/`
-   - [ ] Write initial test files (e.g., `tests/sample.test.js`)
+2. [x] Set up testing framework
+   - [x] Choose testing tool (e.g., Jest)
+   - [x] Add test directory: `tests/`
 
 3. [ ] Extract environment setup script
    - [ ] Write test for environment setup: `tests/env_setup.test.js`
