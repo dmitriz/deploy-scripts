@@ -1,0 +1,26 @@
+---
+# Playbook to install Node.js, npm, and Git on an existing droplet
+- name: Install software on droplet
+  hosts: remote
+  become: true
+  gather_facts: true
+  vars:
+    packages_to_install:
+      - git
+      - nodejs
+      # Add more packages here as needed
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+      changed_when: false
+
+    - name: Upgrade all apt packages
+      apt:
+        upgrade: dist
+      register: upgrade_result
+
+    - name: Install required packages
+      apt:
+        name: "{{ packages_to_install }}"
+        state: present
